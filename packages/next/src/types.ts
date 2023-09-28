@@ -1,5 +1,5 @@
-import type { LogtoConfig, PersistKey } from '@logto/node';
-import type NodeClient from '@logto/node';
+import type { LogtoConfig, PersistKey } from '@slash-copilot/node';
+import type NodeClient from '@slash-copilot/node';
 
 export type SessionData = {
   [PersistKey.AccessToken]?: string;

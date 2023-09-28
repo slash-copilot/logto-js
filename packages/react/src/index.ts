@@ -7,7 +7,7 @@ export type {
   LogtoErrorCode,
   LogtoClientErrorCode,
   InteractionMode,
-} from '@logto/browser';
+} from '@slash-copilot/browser';
 
 export {
   LogtoError,
@@ -22,7 +22,7 @@ export {
   buildOrganizationUrn,
   getOrganizationIdFromUrn,
   PersistKey,
-} from '@logto/browser';
+} from '@slash-copilot/browser';
 
 export * from './provider.js';
 

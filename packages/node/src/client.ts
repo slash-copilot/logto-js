@@ -1,4 +1,4 @@
-import BaseClient from '@logto/client';
+import BaseClient from '@slash-copilot/client';
 import { conditional } from '@silverhand/essentials';
 
 import type { GetContextParameters, LogtoContext } from './types.js';
@@ -13,7 +13,7 @@ export type {
   Storage,
   StorageKey,
   InteractionMode,
-} from '@logto/client';
+} from '@slash-copilot/client';
 
 export {
   LogtoError,
@@ -23,7 +23,7 @@ export {
   Prompt,
   ReservedScope,
   UserScope,
-} from '@logto/client';
+} from '@slash-copilot/client';
 
 export default class LogtoNodeBaseClient extends BaseClient {
   getContext = async ({

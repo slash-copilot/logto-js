@@ -1,5 +1,5 @@
 # Logto Express SDK
-[![Version](https://img.shields.io/npm/v/@logto/express)](https://www.npmjs.com/package/@logto/express)
+[![Version](https://img.shields.io/npm/v/@slash-copilot/express)](https://www.npmjs.com/package/@slash-copilot/express)
 [![Build Status](https://github.com/logto-io/js/actions/workflows/main.yml/badge.svg)](https://github.com/logto-io/js/actions/workflows/main.yml)
 [![Codecov](https://img.shields.io/codecov/c/github/logto-io/js)](https://app.codecov.io/gh/logto-io/js?branch=master)
 
@@ -10,19 +10,19 @@ The Logto Express SDK written in TypeScript. Check out our [integration guide](h
 ### Using npm
 
 ```bash
-npm install @logto/express
+npm install @slash-copilot/express
 ```
 
 ### Using yarn
 
 ```bash
-yarn add @logto/express
+yarn add @slash-copilot/express
 ```
 
 ### Using pnpm
 
 ```bash
-pnpm add @logto/express
+pnpm add @slash-copilot/express
 ```
 
 ## Get sample

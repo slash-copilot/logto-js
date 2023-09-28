@@ -109,7 +109,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **deps:** update dependency @logto/core-kit to v1.0.0-beta.20 ([d9750b1](https://github.com/logto-io/js/commit/d9750b16d79172fb4e9a1166c3f0623452570686))
+* **deps:** update dependency @slash-copilot/core-kit to v1.0.0-beta.20 ([d9750b1](https://github.com/logto-io/js/commit/d9750b16d79172fb4e9a1166c3f0623452570686))
 * **next-sample:** fix undefined in getServerSideProps ([#423](https://github.com/logto-io/js/issues/423)) ([f15e875](https://github.com/logto-io/js/commit/f15e875f34413b3cc1093db590c83af86c0b0374))
 
 
@@ -119,7 +119,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **deps:** update dependency @logto/core-kit to v1.0.0-beta.19 ([ae0be3b](https://github.com/logto-io/js/commit/ae0be3b6c9bc09f4f291dbb1e2a5be6de3d7afb1))
+* **deps:** update dependency @slash-copilot/core-kit to v1.0.0-beta.19 ([ae0be3b](https://github.com/logto-io/js/commit/ae0be3b6c9bc09f4f291dbb1e2a5be6de3d7afb1))
 * **remix:** use the correct sign-out redirect URL which comes down from the Logto instance ([80418c5](https://github.com/logto-io/js/commit/80418c5ff759fc195611a2ffc1245911c501e67f))
 
 
@@ -135,7 +135,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **deps:** update dependency @logto/core-kit to v1.0.0-beta.16 ([b65a499](https://github.com/logto-io/js/commit/b65a4994dbe43293ac08ba40f07967cf3daaca75))
+* **deps:** update dependency @slash-copilot/core-kit to v1.0.0-beta.16 ([b65a499](https://github.com/logto-io/js/commit/b65a4994dbe43293ac08ba40f07967cf3daaca75))
 
 
 

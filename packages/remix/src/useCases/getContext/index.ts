@@ -1,4 +1,4 @@
-import type { GetContextParameters } from '@logto/node';
+import type { GetContextParameters } from '@slash-copilot/node';
 import type { SessionStorage } from '@remix-run/node';
 
 import type { CreateLogtoAdapter } from '../../infrastructure/logto/index.js';

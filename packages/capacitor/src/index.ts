@@ -5,7 +5,7 @@ import LogtoBaseClient, {
   LogtoClientError,
   type InteractionMode,
   type LogtoConfig,
-} from '@logto/browser';
+} from '@slash-copilot/browser';
 
 export {
   LogtoError,
@@ -20,7 +20,7 @@ export {
   buildOrganizationUrn,
   getOrganizationIdFromUrn,
   PersistKey,
-} from '@logto/browser';
+} from '@slash-copilot/browser';
 
 export type CapacitorConfig = {
   /**
@@ -96,8 +96,13 @@ export default class CapacitorLogtoClient extends LogtoBaseClient {
    *
    * @see {@link https://docs.logto.io/docs/recipes/integrate-logto/vanilla-js/#sign-in | Sign in} for more information.
    * @see {@link InteractionMode}
+   * @see {@link handleSignInCallback}
    */
-  async signIn(redirectUri: string, interactionMode?: InteractionMode): Promise<void> {
+  async signIn(
+    redirectUri: string,
+    interactionMode?: InteractionMode,
+    inviteCode?: string
+  ): Promise<void> {
     return new Promise((resolve, reject) => {
       const run = async () => {
         const [browserHandle, appHandle] = await Promise.all([
@@ -124,7 +129,7 @@ export default class CapacitorLogtoClient extends LogtoBaseClient {
             resolve();
           }),
           // Open the in-app browser to start the sign-in flow
-          super.signIn(redirectUri, interactionMode),
+          super.signIn(redirectUri, interactionMode, inviteCode),
         ]);
       };
 
@@ -159,16 +164,16 @@ export default class CapacitorLogtoClient extends LogtoBaseClient {
         const [handle] = await Promise.all([
           postLogoutRedirectUri
             ? App.addListener('appUrlOpen', async ({ url }) => {
-                if (postLogoutRedirectUri && !url.startsWith(postLogoutRedirectUri)) {
-                  return;
-                }
-                await Promise.all([Browser.close(), handle.remove()]);
-                resolve();
-              })
+              if (postLogoutRedirectUri && !url.startsWith(postLogoutRedirectUri)) {
+                return;
+              }
+              await Promise.all([Browser.close(), handle.remove()]);
+              resolve();
+            })
             : Browser.addListener('browserFinished', async () => {
-                await handle.remove();
-                resolve();
-              }),
+              await handle.remove();
+              resolve();
+            }),
           super.signOut(postLogoutRedirectUri),
         ]);
       };

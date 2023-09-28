@@ -15,6 +15,7 @@ export type SignInUriParameters = {
   resources?: string[];
   prompt?: Prompt;
   interactionMode?: InteractionMode;
+  inviteCode?: string;
 };
 
 export const generateSignInUri = ({
@@ -27,6 +28,7 @@ export const generateSignInUri = ({
   resources,
   prompt,
   interactionMode,
+  inviteCode,
 }: SignInUriParameters) => {
   const urlSearchParameters = new URLSearchParams({
     [QueryKey.ClientId]: clientId,
@@ -46,6 +48,11 @@ export const generateSignInUri = ({
   // Set interactionMode to signUp for a create account user experience
   if (interactionMode) {
     urlSearchParameters.append(QueryKey.InteractionMode, interactionMode);
+  }
+
+  // Set inviteCode to prefill the invite code field
+  if (inviteCode) {
+    urlSearchParameters.append(QueryKey.InviteCode, inviteCode);
   }
 
   return `${authorizationEndpoint}?${urlSearchParameters.toString()}`;

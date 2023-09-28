@@ -1,5 +1,5 @@
 {
-  "name": "@logto/remix",
+  "name": "@slash-copilot/remix",
   "version": "2.1.0",
   "type": "module",
   "main": "./lib/index.cjs",
@@ -31,7 +31,7 @@
     "prepack": "pnpm build && pnpm test"
   },
   "dependencies": {
-    "@logto/node": "workspace:^2.2.0"
+    "@slash-copilot/node": "workspace:^2.2.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.0.0",

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useLogto, type UserInfoResponse } from "@logto/vue";
+import { useLogto, type UserInfoResponse } from "@slash-copilot/vue";
 import { RouterLink } from "vue-router";
 import { ref } from "vue";
 import { baseUrl, redirectUrl } from "../consts";

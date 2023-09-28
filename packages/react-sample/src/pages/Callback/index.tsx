@@ -1,4 +1,4 @@
-import { useHandleSignInCallback } from '@logto/react';
+import { useHandleSignInCallback } from '@slash-copilot/react';
 import { useNavigate } from 'react-router-dom';
 
 const Callback = () => {

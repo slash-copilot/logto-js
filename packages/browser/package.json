@@ -1,5 +1,5 @@
 {
-  "name": "@logto/browser",
+  "name": "@slash-copilot/browser",
   "version": "2.2.1",
   "type": "module",
   "main": "./lib/index.cjs",
@@ -31,7 +31,7 @@
     "prepack": "pnpm build && pnpm test"
   },
   "dependencies": {
-    "@logto/client": "workspace:^2.3.1",
+    "@slash-copilot/client": "workspace:^2.2.3",
     "@silverhand/essentials": "^2.6.2",
     "js-base64": "^3.7.4"
   },

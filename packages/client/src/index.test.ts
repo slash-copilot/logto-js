@@ -20,8 +20,8 @@ import {
 } from './mock.js';
 import { buildAccessTokenKey } from './utils/index.js';
 
-jest.mock('@logto/js', () => ({
-  ...jest.requireActual('@logto/js'),
+jest.mock('@slash-copilot/js', () => ({
+  ...jest.requireActual('@slash-copilot/js'),
   fetchOidcConfig: async () => fetchOidcConfig(),
   decodeIdToken: jest.fn(() => ({
     iss: 'issuer_value',

@@ -1,4 +1,4 @@
-import { Prompt } from '@logto/js';
+import { Prompt } from '@slash-copilot/js';
 
 import { appId, endpoint, LogtoClientWithAccessors, createClient, createAdapters } from './mock.js';
 

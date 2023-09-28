@@ -1,6 +1,6 @@
 /** @link [Proof Key for Code Exchange by OAuth Public Clients](https://datatracker.ietf.org/doc/html/rfc7636) */
 
-import { LogtoError } from '@logto/client';
+import { LogtoError } from '@slash-copilot/client';
 import { fromUint8Array } from 'js-base64';
 
 /**

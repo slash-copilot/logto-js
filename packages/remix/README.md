@@ -1,5 +1,5 @@
 # Logto Remix SDK
-[![Version](https://img.shields.io/npm/v/@logto/remix)](https://www.npmjs.com/package/@logto/remix)
+[![Version](https://img.shields.io/npm/v/@slash-copilot/remix)](https://www.npmjs.com/package/@slash-copilot/remix)
 [![Build Status](https://github.com/logto-io/js/actions/workflows/main.yml/badge.svg)](https://github.com/logto-io/js/actions/workflows/main.yml)
 [![Codecov](https://img.shields.io/codecov/c/github/logto-io/js)](https://app.codecov.io/gh/logto-io/js?branch=master)
 
@@ -10,19 +10,19 @@ The Logto Remix SDK written in TypeScript.
 ### Using npm
 
 ```bash
-npm install @logto/remix
+npm install @slash-copilot/remix
 ```
 
 ### Using yarn
 
 ```bash
-yarn add @logto/remix
+yarn add @slash-copilot/remix
 ```
 
 ### Using pnpm
 
 ```bash
-pnpm add @logto/remix
+pnpm add @slash-copilot/remix
 ```
 
 ## Usage
@@ -47,7 +47,7 @@ Afterwards, we can initialize the SDK via:
 ```ts
 // app/services/authentication.ts
 
-import { makeLogtoRemix } from "@logto/remix";
+import { makeLogtoRemix } from "@slash-copilot/remix";
 
 export const logto = makeLogtoRemix(
   {
@@ -97,7 +97,7 @@ A typical use case is to fetch the _authentication context_ which contains infor
 
 ```ts
 // app/routes/index.tsx
-import type { LogtoContext } from "@logto/remix";
+import type { LogtoContext } from "@slash-copilot/remix";
 import { LoaderFunction, json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 

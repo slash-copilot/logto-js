@@ -34,7 +34,7 @@ type Adapter = {
   navigate: (url: string) => void;
 };
 
-jest.mock('@logto/node', () =>
+jest.mock('@slash-copilot/node', () =>
   jest.fn((_: unknown, { navigate }: Adapter) => ({
     signIn: (_redirectUri?: string, interactionMode?: string) => {
       navigate(interactionMode ? `${signInUrl}?interactionMode=${interactionMode}` : signInUrl);

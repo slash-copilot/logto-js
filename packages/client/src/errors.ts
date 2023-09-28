@@ -1,4 +1,4 @@
-import { UserScope } from '@logto/js';
+import { UserScope } from '@slash-copilot/js';
 
 const logtoClientErrorCodes = Object.freeze({
   'sign_in_session.invalid': 'Invalid sign-in session.',

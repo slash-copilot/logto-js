@@ -1,5 +1,5 @@
-import type { Storage, CacheKey } from '@logto/client';
 import type { Nullable } from '@silverhand/essentials';
+import type { Storage, CacheKey } from '@slash-copilot/client';
 
 const keyPrefix = `logto_cache`;
 

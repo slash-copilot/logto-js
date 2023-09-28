@@ -1,5 +1,5 @@
 # Logto React SDK
-[![Version](https://img.shields.io/npm/v/@logto/react)](https://www.npmjs.com/package/@logto/react)
+[![Version](https://img.shields.io/npm/v/@slash-copilot/react)](https://www.npmjs.com/package/@slash-copilot/react)
 [![Build Status](https://github.com/logto-io/js/actions/workflows/main.yml/badge.svg)](https://github.com/logto-io/js/actions/workflows/main.yml)
 [![Codecov](https://img.shields.io/codecov/c/github/logto-io/js)](https://app.codecov.io/gh/logto-io/js?branch=master)
 
@@ -10,19 +10,19 @@ The Logto React SDK written in TypeScript. Check out our [integration guide](htt
 ### Using npm
 
 ```bash
-npm install @logto/react
+npm install @slash-copilot/react
 ```
 
 ### Using yarn
 
 ```bash
-yarn add @logto/react
+yarn add @slash-copilot/react
 ```
 
 ### Using pnpm
 
 ```bash
-pnpm add @logto/react
+pnpm add @slash-copilot/react
 ```
 
 ## Get sample

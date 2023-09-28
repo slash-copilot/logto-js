@@ -43,13 +43,13 @@
 - 05b9d3e: update "RefreshTokenTokenResponse" type in core JS SDK and set "refresh_token" field as optional
 - f9ff6f4: Align the js SDK error type exports.
 
-  - @logto/react: add `LogtoRequestError` export
-  - @logto/vue: add `LogtoRequestError` export
-  - @logto/express: add logto errors export
-  - @logto/next: add logto errors export
+  - @slash-copilot/react: add `LogtoRequestError` export
+  - @slash-copilot/vue: add `LogtoRequestError` export
+  - @slash-copilot/express: add logto errors export
+  - @slash-copilot/next: add logto errors export
 
 - Updated dependencies [05b9d3e]
-  - @logto/js@2.1.3
+  - @slash-copilot/js@2.1.3
 
 ## 2.2.2
 
@@ -57,7 +57,7 @@
 
 - eb94b36: add comment annotations for better dev experience
 - Updated dependencies [eb94b36]
-  - @logto/js@2.1.2
+  - @slash-copilot/js@2.1.2
 
 ## 2.2.1
 
@@ -83,7 +83,7 @@
 ### Patch Changes
 
 - Updated dependencies [a839b08]
-  - @logto/js@2.1.0
+  - @slash-copilot/js@2.1.0
 
 ## 2.0.0
 
@@ -94,7 +94,7 @@
 ### Patch Changes
 
 - Updated dependencies [3aa0913]
-  - @logto/js@2.0.0
+  - @slash-copilot/js@2.0.0
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
@@ -107,7 +107,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### [1.1.1](https://github.com/logto-io/js/compare/v1.1.0...v1.1.1) (2023-04-11)
 
-**Note:** Version bump only for package @logto/client
+**Note:** Version bump only for package @slash-copilot/client
 
 ## [1.1.0](https://github.com/logto-io/js/compare/v1.0.0...v1.1.0) (2023-03-19)
 
@@ -117,7 +117,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [1.0.0](https://github.com/logto-io/js/compare/v1.0.0-rc.0...v1.0.0) (2023-02-28)
 
-**Note:** Version bump only for package @logto/client
+**Note:** Version bump only for package @slash-copilot/client
 
 ## [1.0.0-rc.0](https://github.com/logto-io/js/compare/v1.0.0-beta.15...v1.0.0-rc.0) (2023-02-03)
 
@@ -133,7 +133,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [1.0.0-beta.14](https://github.com/logto-io/js/compare/v1.0.0-beta.13...v1.0.0-beta.14) (2022-12-12)
 
-**Note:** Version bump only for package @logto/client
+**Note:** Version bump only for package @slash-copilot/client
 
 ## [1.0.0-beta.13](https://github.com/logto-io/js/compare/v1.0.0-beta.12...v1.0.0-beta.13) (2022-11-08)
 
@@ -151,23 +151,23 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-- **deps:** update dependency @logto/core-kit to v1.0.0-beta.20 ([d9750b1](https://github.com/logto-io/js/commit/d9750b16d79172fb4e9a1166c3f0623452570686))
+- **deps:** update dependency @slash-copilot/core-kit to v1.0.0-beta.20 ([d9750b1](https://github.com/logto-io/js/commit/d9750b16d79172fb4e9a1166c3f0623452570686))
 
 ## [1.0.0-beta.10](https://github.com/logto-io/js/compare/v1.0.0-beta.9...v1.0.0-beta.10) (2022-10-21)
 
 ### Bug Fixes
 
-- **deps:** update dependency @logto/core-kit to v1.0.0-beta.19 ([ae0be3b](https://github.com/logto-io/js/commit/ae0be3b6c9bc09f4f291dbb1e2a5be6de3d7afb1))
+- **deps:** update dependency @slash-copilot/core-kit to v1.0.0-beta.19 ([ae0be3b](https://github.com/logto-io/js/commit/ae0be3b6c9bc09f4f291dbb1e2a5be6de3d7afb1))
 
 ## [1.0.0-beta.9](https://github.com/logto-io/js/compare/v1.0.0-beta.8...v1.0.0-beta.9) (2022-10-19)
 
 ### Bug Fixes
 
-- **deps:** update dependency @logto/core-kit to v1.0.0-beta.16 ([b65a499](https://github.com/logto-io/js/commit/b65a4994dbe43293ac08ba40f07967cf3daaca75))
+- **deps:** update dependency @slash-copilot/core-kit to v1.0.0-beta.16 ([b65a499](https://github.com/logto-io/js/commit/b65a4994dbe43293ac08ba40f07967cf3daaca75))
 
 ## [1.0.0-beta.8](https://github.com/logto-io/js/compare/v1.0.0-beta.7...v1.0.0-beta.8) (2022-09-23)
 
-**Note:** Version bump only for package @logto/client
+**Note:** Version bump only for package @slash-copilot/client
 
 ## [1.0.0-beta.7](https://github.com/logto-io/js/compare/v1.0.0-beta.6...v1.0.0-beta.7) (2022-09-20)
 
@@ -189,11 +189,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [1.0.0-beta.4](https://github.com/logto-io/js/compare/v1.0.0-beta.3...v1.0.0-beta.4) (2022-09-09)
 
-**Note:** Version bump only for package @logto/client
+**Note:** Version bump only for package @slash-copilot/client
 
 ## [1.0.0-beta.3](https://github.com/logto-io/js/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2022-08-22)
 
-**Note:** Version bump only for package @logto/client
+**Note:** Version bump only for package @slash-copilot/client
 
 ## [1.0.0-beta.2](https://github.com/logto-io/js/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2022-08-08)
 

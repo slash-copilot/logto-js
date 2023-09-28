@@ -1,5 +1,5 @@
 # Logto JS (Core) SDK
-[![Version](https://img.shields.io/npm/v/@logto/js)](https://www.npmjs.com/package/@logto/js)
+[![Version](https://img.shields.io/npm/v/@slash-copilot/js)](https://www.npmjs.com/package/@slash-copilot/js)
 [![Build Status](https://github.com/logto-io/js/actions/workflows/main.yml/badge.svg)](https://github.com/logto-io/js/actions/workflows/main.yml)
 [![Codecov](https://img.shields.io/codecov/c/github/logto-io/js)](https://app.codecov.io/gh/logto-io/js?branch=master)
 
@@ -10,19 +10,19 @@ The Logto JavaScript Core SDK written in TypeScript. Check out our [docs](https:
 ### Using npm
 
 ```bash
-npm install @logto/js
+npm install @slash-copilot/js
 ```
 
 ### Using yarn
 
 ```bash
-yarn add @logto/js
+yarn add @slash-copilot/js
 ```
 
 ### Using pnpm
 
 ```bash
-pnpm add @logto/js
+pnpm add @slash-copilot/js
 ```
 
 ## What is this and how does it work?

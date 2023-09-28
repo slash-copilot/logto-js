@@ -1,4 +1,4 @@
-import { useLogto } from '@logto/react';
+import { useLogto } from '@slash-copilot/react';
 import { useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 

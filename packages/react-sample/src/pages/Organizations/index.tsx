@@ -1,4 +1,4 @@
-import { useLogto } from '@logto/react';
+import { useLogto } from '@slash-copilot/react';
 import { useEffect, useState } from 'react';
 
 const Organizations = () => {

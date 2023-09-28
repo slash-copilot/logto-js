@@ -51,7 +51,7 @@ type Adapter = {
   navigate: (url: string) => void;
 };
 
-jest.mock('@logto/node/edge', () =>
+jest.mock('@slash-copilot/node/edge', () =>
   jest.fn((_: unknown, { navigate }: Adapter) => ({
     signIn: () => {
       navigate(signInUrl);

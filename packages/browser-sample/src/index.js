@@ -1,4 +1,4 @@
-import LogtoClient, { UserScope } from '@logto/browser';
+import LogtoClient, { UserScope } from '@slash-copilot/browser';
 
 import { endpoint, appId } from './consts';
 import Callback from './pages/Callback';

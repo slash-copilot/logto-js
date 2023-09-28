@@ -1,5 +1,5 @@
-import { generateSignInUri, type OidcConfigResponse, Prompt } from '@logto/js';
 import { conditional, type Nullable } from '@silverhand/essentials';
+import { generateSignInUri, type OidcConfigResponse, Prompt } from '@slash-copilot/js';
 
 import type { Storage } from './adapter/index.js';
 import type { AccessToken, LogtoConfig, LogtoSignInSessionItem } from './index.js';

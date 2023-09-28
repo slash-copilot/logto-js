@@ -1,4 +1,4 @@
-import { type LogtoContext } from '@logto/next';
+import { type LogtoContext } from '@slash-copilot/next';
 import { cookies } from 'next/headers';
 
 // `server-only` guarantees any modules that import code in file

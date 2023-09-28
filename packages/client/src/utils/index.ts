@@ -1,5 +1,5 @@
-import { discoveryPath } from '@logto/js';
 import { conditionalString } from '@silverhand/essentials';
+import { discoveryPath } from '@slash-copilot/js';
 
 export * from './requester.js';
 

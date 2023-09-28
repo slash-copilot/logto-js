@@ -1,2 +1,7 @@
 packages:
   - 'packages/*'
+  - '!packages/*-sample'
+  - '!packages/node'
+  - '!packages/remix'
+  - '!packages/vue'
+  - '!packages/express'

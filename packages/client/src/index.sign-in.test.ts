@@ -1,4 +1,4 @@
-import { Prompt } from '@logto/js';
+import { Prompt } from '@slash-copilot/js';
 import { trySafe } from '@silverhand/essentials';
 
 import type { LogtoSignInSessionItem } from './index.js';
@@ -25,8 +25,8 @@ import {
   mockedSignUpUri,
 } from './mock.js';
 
-jest.mock('@logto/js', () => ({
-  ...jest.requireActual('@logto/js'),
+jest.mock('@slash-copilot/js', () => ({
+  ...jest.requireActual('@slash-copilot/js'),
   fetchOidcConfig: async () => fetchOidcConfig(),
   verifyIdToken: jest.fn(),
 }));

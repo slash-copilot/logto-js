@@ -1,7 +1,7 @@
 import http from 'node:http';
 
-import type { LogtoExpressConfig } from '@logto/express';
-import { handleAuthRoutes, withLogto } from '@logto/express';
+import type { LogtoExpressConfig } from '@slash-copilot/express';
+import { handleAuthRoutes, withLogto } from '@slash-copilot/express';
 import cookieParser from 'cookie-parser';
 import type { Request, Response, NextFunction } from 'express';
 import express from 'express';

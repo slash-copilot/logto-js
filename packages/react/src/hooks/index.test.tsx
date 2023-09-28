@@ -1,4 +1,4 @@
-import LogtoClient from '@logto/browser';
+import LogtoClient from '@slash-copilot/browser';
 import { renderHook, act, waitFor } from '@testing-library/react';
 import { useContext, type ReactNode, useEffect } from 'react';
 
@@ -13,7 +13,7 @@ const handleSignInCallback = jest.fn().mockResolvedValue(undefined);
 const getAccessToken = jest.fn();
 const signIn = jest.fn();
 
-jest.mock('@logto/browser', () => {
+jest.mock('@slash-copilot/browser', () => {
   return jest.fn().mockImplementation(() => {
     return {
       isAuthenticated,

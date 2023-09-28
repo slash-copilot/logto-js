@@ -1,5 +1,5 @@
-import type { LogtoConfig, ClientAdapter } from '@logto/client';
-import { createRequester } from '@logto/client';
+import type { LogtoConfig, ClientAdapter } from '@slash-copilot/client';
+import { createRequester } from '@slash-copilot/client';
 import fetch from 'node-fetch';
 
 import BaseClient from './client.js';
@@ -15,7 +15,7 @@ export type {
   Storage,
   StorageKey,
   InteractionMode,
-} from '@logto/client';
+} from '@slash-copilot/client';
 
 export {
   LogtoError,
@@ -30,7 +30,7 @@ export {
   buildOrganizationUrn,
   getOrganizationIdFromUrn,
   PersistKey,
-} from '@logto/client';
+} from '@slash-copilot/client';
 
 export default class LogtoClient extends BaseClient {
   constructor(config: LogtoConfig, adapter: Pick<ClientAdapter, 'navigate' | 'storage'>) {

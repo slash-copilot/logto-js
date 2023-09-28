@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useLogto } from "@logto/vue";
+import { useLogto } from "@slash-copilot/vue";
 import { onMounted, ref } from "vue";
 
 const { getOrganizationToken, getOrganizationTokenClaims, getIdTokenClaims } =

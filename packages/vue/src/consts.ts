@@ -1,2 +1,2 @@
-export const logtoInjectionKey = '@logto/vue';
-export const contextInjectionKey = '@logto/vue:context';
+export const logtoInjectionKey = '@slash-copilot/vue';
+export const contextInjectionKey = '@slash-copilot/vue:context';

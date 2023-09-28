@@ -1,6 +1,6 @@
 # Logto Node.js SDK
 
-[![Version](https://img.shields.io/npm/v/@logto/node)](https://www.npmjs.com/package/@logto/node)
+[![Version](https://img.shields.io/npm/v/@slash-copilot/node)](https://www.npmjs.com/package/@slash-copilot/node)
 [![Build Status](https://github.com/logto-io/js/actions/workflows/main.yml/badge.svg)](https://github.com/logto-io/js/actions/workflows/main.yml)
 [![Codecov](https://img.shields.io/codecov/c/github/logto-io/js)](https://app.codecov.io/gh/logto-io/js?branch=master)
 
@@ -11,24 +11,24 @@ The Logto Node.js SDK written in TypeScript. Check out our [docs](https://docs.l
 ### Using npm
 
 ```bash
-npm install @logto/node
+npm install @slash-copilot/node
 ```
 
 ### Using yarn
 
 ```bash
-yarn add @logto/node
+yarn add @slash-copilot/node
 ```
 
 ### Using pnpm
 
 ```bash
-pnpm add @logto/node
+pnpm add @slash-copilot/node
 ```
 
 ## What is this and how does it work?
 
-As the name suggests, Logto Node.js SDK is the foundation of all Logto SDKs that run in Node.js (Express, Next.js, etc.). `@logto/node` extends `@logto/client` and provides a Node.js specific implementation of the client adapters:
+As the name suggests, Logto Node.js SDK is the foundation of all Logto SDKs that run in Node.js (Express, Next.js, etc.). `@slash-copilot/node` extends `@slash-copilot/client` and provides a Node.js specific implementation of the client adapters:
 
 - Implements `requester` by using package `node-fetch`.
 - Implements `generateCodeChallenge`, `generateCodeVerifier`, `generateState` methods by using `crypto`.

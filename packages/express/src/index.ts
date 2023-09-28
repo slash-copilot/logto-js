@@ -1,6 +1,6 @@
 import type { IncomingMessage } from 'node:http';
 
-import NodeClient from '@logto/node';
+import NodeClient from '@slash-copilot/node';
 import type { Request, Response, NextFunction } from 'express';
 import { Router } from 'express';
 
@@ -21,9 +21,9 @@ export {
   buildOrganizationUrn,
   getOrganizationIdFromUrn,
   PersistKey,
-} from '@logto/node';
+} from '@slash-copilot/node';
 
-export type { LogtoContext, InteractionMode, LogtoErrorCode } from '@logto/node';
+export type { LogtoContext, InteractionMode, LogtoErrorCode } from '@slash-copilot/node';
 export type { LogtoExpressConfig } from './types.js';
 
 export type Middleware = (
@@ -101,14 +101,14 @@ export const handleAuthRoutes = (config: LogtoExpressConfig): Router => {
 
 export const withLogto =
   (config: LogtoExpressConfig): Middleware =>
-  async (request: IncomingMessage, response: Response, next: NextFunction) => {
-    const client = createNodeClient(request, response, config);
-    const user = await client.getContext({
-      getAccessToken: config.getAccessToken,
-      resource: config.resource,
-      fetchUserInfo: config.fetchUserInfo,
-    });
-    // eslint-disable-next-line @silverhand/fp/no-mutating-methods
-    Object.defineProperty(request, 'user', { enumerable: true, get: () => user });
-    next();
-  };
+    async (request: IncomingMessage, response: Response, next: NextFunction) => {
+      const client = createNodeClient(request, response, config);
+      const user = await client.getContext({
+        getAccessToken: config.getAccessToken,
+        resource: config.resource,
+        fetchUserInfo: config.fetchUserInfo,
+      });
+      // eslint-disable-next-line @silverhand/fp/no-mutating-methods
+      Object.defineProperty(request, 'user', { enumerable: true, get: () => user });
+      next();
+    };

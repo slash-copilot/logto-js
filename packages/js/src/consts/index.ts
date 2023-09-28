@@ -31,6 +31,7 @@ export enum QueryKey {
   Token = 'token',
   // Need to align with the OIDC extraParams settings in core
   InteractionMode = 'interaction_mode',
+  InviteCode = 'invite_code',
   /** The query key for specifying the organization ID. */
   OrganizationId = 'organization_id',
 }

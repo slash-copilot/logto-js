@@ -1,3 +1,10 @@
+# Release guidance
+
+> bump version , replace package every package version
+> git commit -m "chore: bump version to 0.0.1" 
+> ./scrpts/version 
+> ./scrpts/publish
+
 <p align="center">
   <a href="https://logto.io" target="_blank" align="center" alt="Logto Logo">
       <img src="./logo.png" width="100">

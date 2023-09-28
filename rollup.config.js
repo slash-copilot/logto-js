@@ -19,7 +19,7 @@ const configs = {
     { dir: 'lib', preserveModules: true },
   ],
   plugins: [typescript({ tsconfig: 'tsconfig.build.json' }), nodeResolve(), summary()],
-  external: [/node_modules/, /@logto/],
+  external: [/node_modules/, /@slash-copilot/],
 };
 
 export default configs;

@@ -1,6 +1,6 @@
 import * as crypto from 'crypto';
 
-import { PersistKey } from '@logto/node';
+import { PersistKey } from '@slash-copilot/node';
 
 import { unwrapSession, wrapSession } from './session';
 

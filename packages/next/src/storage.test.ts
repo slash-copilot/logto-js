@@ -1,4 +1,4 @@
-import { PersistKey } from '@logto/node';
+import { PersistKey } from '@slash-copilot/node';
 
 import NextStorage from './storage.js';
 

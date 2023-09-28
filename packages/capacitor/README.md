@@ -1,5 +1,5 @@
 # Logto JS Capacitor SDK
-[![Version](https://img.shields.io/npm/v/@logto/capacitor)](https://www.npmjs.com/package/@logto/capacitor)
+[![Version](https://img.shields.io/npm/v/@slash-copilot/capacitor)](https://www.npmjs.com/package/@slash-copilot/capacitor)
 [![Build Status](https://github.com/logto-io/js/actions/workflows/main.yml/badge.svg)](https://github.com/logto-io/js/actions/workflows/main.yml)
 [![Codecov](https://img.shields.io/codecov/c/github/logto-io/js)](https://app.codecov.io/gh/logto-io/js?branch=master)
 
@@ -10,19 +10,19 @@ The Logto JavaScript Capacitor SDK written in TypeScript.
 ### Using npm
 
 ```bash
-npm install @logto/capacitor @capacitor/app @capacitor/browser @capacitor/preferences
+npm install @slash-copilot/capacitor @capacitor/app @capacitor/browser @capacitor/preferences
 ```
 
 ### Using yarn
 
 ```bash
-yarn add @logto/capacitor @capacitor/app @capacitor/browser @capacitor/preferences
+yarn add @slash-copilot/capacitor @capacitor/app @capacitor/browser @capacitor/preferences
 ```
 
 ### Using pnpm
 
 ```bash
-pnpm add @logto/capacitor @capacitor/app @capacitor/browser @capacitor/preferences
+pnpm add @slash-copilot/capacitor @capacitor/app @capacitor/browser @capacitor/preferences
 ```
 
 ## What is this and how does it work?

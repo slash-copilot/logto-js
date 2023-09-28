@@ -1,4 +1,4 @@
-import type { LogtoConfig } from '@logto/node';
+import type { LogtoConfig } from '@slash-copilot/node';
 import type { Session } from '@remix-run/node';
 
 import { makeLogtoClient } from './create-client.js';
@@ -24,4 +24,4 @@ export const makeLogtoAdapter = (config: MakeLogtoAdapterConfiguration) => (sess
 
 export type CreateLogtoAdapter = ReturnType<typeof makeLogtoAdapter>;
 
-export { type LogtoContext } from '@logto/node';
+export { type LogtoContext } from '@slash-copilot/node';

@@ -2,8 +2,8 @@ import { createClient, mockFetchOidcConfig } from './mock.js';
 
 const fetchOidcConfig = mockFetchOidcConfig(1);
 
-jest.mock('@logto/js', () => ({
-  ...jest.requireActual('@logto/js'),
+jest.mock('@slash-copilot/js', () => ({
+  ...jest.requireActual('@slash-copilot/js'),
   fetchOidcConfig: async () => fetchOidcConfig(),
 }));
 

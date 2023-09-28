@@ -29,26 +29,33 @@ export class CachedRemoteJwkSet {
     }
   }
 
+  async _getLocalKey(...args: Parameters<JWTVerifyGetKey>) {
+    if (!this.jwkSet) {
+      throw new Error('No local JWK Set found.');
+    }
+    return createLocalJWKSet(this.jwkSet)(...args);
+  }
+
   async getKey(...args: Parameters<JWTVerifyGetKey>) {
     if (!this.jwkSet) {
-      this.jwkSet = await this.#load();
+      this.jwkSet = await this._load();
     }
 
     try {
-      return await this.#getLocalKey(...args);
+      return await this._getLocalKey(...args);
     } catch (error: unknown) {
       // Jose does not export the error definition
       // Found in https://github.com/panva/jose/blob/d5b3cb672736112b1e1e31ac4d5e9cd641675206/src/util/errors.ts#L347
       if (error instanceof Error && 'code' in error && error.code === 'ERR_JWKS_NO_MATCHING_KEY') {
-        this.jwkSet = await this.#load();
-        return this.#getLocalKey(...args);
+        this.jwkSet = await this._load();
+        return this._getLocalKey(...args);
       }
 
       throw error;
     }
   }
 
-  async #load(): Promise<JSONWebKeySet> {
+  async _load(): Promise<JSONWebKeySet> {
     return this.adapter.getWithCache(CacheKey.Jwks, async () => {
       const controller = new AbortController();
       const response = await fetch(this.url, { signal: controller.signal, redirect: 'manual' });
@@ -65,12 +72,5 @@ export class CachedRemoteJwkSet {
 
       return json;
     });
-  }
-
-  async #getLocalKey(...args: Parameters<JWTVerifyGetKey>) {
-    if (!this.jwkSet) {
-      throw new Error('No local JWK Set found.');
-    }
-    return createLocalJWKSet(this.jwkSet)(...args);
   }
 }

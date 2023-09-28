@@ -1,5 +1,5 @@
 # Logto JS Browser SDK
-[![Version](https://img.shields.io/npm/v/@logto/browser)](https://www.npmjs.com/package/@logto/browser)
+[![Version](https://img.shields.io/npm/v/@slash-copilot/browser)](https://www.npmjs.com/package/@slash-copilot/browser)
 [![Build Status](https://github.com/logto-io/js/actions/workflows/main.yml/badge.svg)](https://github.com/logto-io/js/actions/workflows/main.yml)
 [![Codecov](https://img.shields.io/codecov/c/github/logto-io/js)](https://app.codecov.io/gh/logto-io/js?branch=master)
 
@@ -10,24 +10,24 @@ The Logto JavaScript Browser SDK written in TypeScript. Check out our [docs](htt
 ### Using npm
 
 ```bash
-npm install @logto/browser
+npm install @slash-copilot/browser
 ```
 
 ### Using yarn
 
 ```bash
-yarn add @logto/browser
+yarn add @slash-copilot/browser
 ```
 
 ### Using pnpm
 
 ```bash
-pnpm add @logto/browser
+pnpm add @slash-copilot/browser
 ```
 
 ## What is this and how does it work?
 
-As the name suggests, Logto browser SDK is the foundation of all Logto SDKs that run in a browser environment (Vanilla, React, Vue, etc.). `@logto/browser` extends `@logto/client` and provides a browser specific implementation of the client adapters:
+As the name suggests, Logto browser SDK is the foundation of all Logto SDKs that run in a browser environment (Vanilla, React, Vue, etc.). `@slash-copilot/browser` extends `@slash-copilot/client` and provides a browser specific implementation of the client adapters:
 
 * Implements `Storage` by using browser `localStorage` and `sessionStorage`.
 * Implements `navigate` method by using `window.location.href`.

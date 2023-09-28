@@ -1,4 +1,4 @@
-import { UserScope } from '@logto/next';
+import { UserScope } from '@slash-copilot/next';
 
 export const config = {
   appId: process.env.APP_ID ?? '<app-id>',

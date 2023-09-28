@@ -34,7 +34,7 @@ describe('CachedRemoteJwkSet', () => {
       code = 'ERR_JWKS_NO_MATCHING_KEY';
     }
 
-    // Should throw at `#getLocalKey`, but I don't want to create a new class for this
+    // Should throw at ` _getLocalKey`, but I don't want to create a new class for this
     createLocalJWKSet.mockImplementationOnce(() => {
       throw new MockNoMatchingKeyError();
     });

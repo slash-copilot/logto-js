@@ -12,7 +12,7 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    include: ["@logto/vue"],
+    include: ["@slash-copilot/vue"],
   },
   build: {
     commonjsOptions: {

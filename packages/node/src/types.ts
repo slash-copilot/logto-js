@@ -1,4 +1,4 @@
-import type { IdTokenClaims, UserInfoResponse } from '@logto/client';
+import type { IdTokenClaims, UserInfoResponse } from '@slash-copilot/client';
 
 declare module 'http' {
   // Honor module definition

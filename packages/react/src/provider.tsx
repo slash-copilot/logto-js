@@ -1,4 +1,4 @@
-import LogtoClient, { type LogtoConfig } from '@logto/browser';
+import LogtoClient, { type LogtoConfig } from '@slash-copilot/browser';
 import { type ReactNode, useEffect, useMemo, useState } from 'react';
 
 import { LogtoContext } from './context.js';

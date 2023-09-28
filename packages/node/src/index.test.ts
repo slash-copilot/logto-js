@@ -14,7 +14,7 @@ const getAccessToken = jest.fn(async () => true);
 const fetchUserInfo = jest.fn(async () => ({ name: 'name' }));
 const getIdTokenClaims = jest.fn(async () => ({ sub: 'sub' }));
 const isAuthenticated = jest.fn(async () => true);
-jest.mock('@logto/client', () => ({
+jest.mock('@slash-copilot/client', () => ({
   __esModule: true,
   default: jest.fn(() => ({
     getAccessToken,

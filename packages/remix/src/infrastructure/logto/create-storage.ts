@@ -1,4 +1,4 @@
-import type { Storage, StorageKey } from '@logto/node';
+import type { Storage, StorageKey } from '@slash-copilot/node';
 import type { Session } from '@remix-run/node';
 
 class LogtoStorage implements Storage<StorageKey> {

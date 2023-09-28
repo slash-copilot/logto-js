@@ -1,5 +1,5 @@
 /* eslint-disable unicorn/no-useless-undefined */
-import LogtoClient from '@logto/browser';
+import LogtoClient from '@slash-copilot/browser';
 import { type App, readonly } from 'vue';
 
 import { contextInjectionKey, logtoInjectionKey } from './consts.js';
@@ -19,7 +19,7 @@ const injectMock = jest.fn<unknown, string[]>((): unknown => {
   return undefined;
 });
 
-jest.mock('@logto/browser', () => {
+jest.mock('@slash-copilot/browser', () => {
   return jest.fn().mockImplementation(() => {
     return {
       isAuthenticated,

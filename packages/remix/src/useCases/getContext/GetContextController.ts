@@ -1,4 +1,4 @@
-import type { GetContextParameters, LogtoContext } from '@logto/node';
+import type { GetContextParameters, LogtoContext } from '@slash-copilot/node';
 
 import { getCookieHeaderFromRequest } from '../../framework/get-cookie-header-from-request.js';
 

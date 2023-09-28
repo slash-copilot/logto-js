@@ -1,5 +1,5 @@
-import type { LogtoConfig } from '@logto/browser';
-import LogtoClient from '@logto/browser';
+import type { LogtoConfig } from '@slash-copilot/browser';
+import LogtoClient from '@slash-copilot/browser';
 import { type Optional } from '@silverhand/essentials';
 import type { App, Ref } from 'vue';
 import { inject, readonly, watchEffect } from 'vue';
@@ -16,7 +16,7 @@ export type {
   LogtoErrorCode,
   LogtoClientErrorCode,
   InteractionMode,
-} from '@logto/browser';
+} from '@slash-copilot/browser';
 
 export {
   LogtoError,
@@ -30,12 +30,12 @@ export {
   buildOrganizationUrn,
   getOrganizationIdFromUrn,
   PersistKey,
-} from '@logto/browser';
+} from '@slash-copilot/browser';
 
 type OptionalPromiseReturn<T> = {
   [K in keyof T]: T[K] extends (...args: infer A) => Promise<infer R>
-    ? (...args: A) => Promise<Optional<R>>
-    : T[K];
+  ? (...args: A) => Promise<Optional<R>>
+  : T[K];
 };
 
 type LogtoVuePlugin = {
@@ -67,7 +67,7 @@ type Logto = {
  *
  * ```ts
  * import { createApp } from 'vue';
- * import { createLogto } from '@logto/vue';
+ * import { createLogto } from '@slash-copilot/vue';
  *
  * const app = createApp(App);
  * const app.use(createLogto, {
@@ -101,7 +101,7 @@ export const createLogto: LogtoVuePlugin = {
  * A Vue composable method that provides the Logto reactive refs and auth methods.
  *
  * ```ts
- * import { useLogto } from '@logto/vue';
+ * import { useLogto } from '@slash-copilot/vue';
  *
  * export default {
  *  setup() {
@@ -133,8 +133,8 @@ export const useLogto = (): Logto => {
  * A Vue composable method that watches browser navigation and automatically handles the sign-in callback
  *
  * ```ts
- * import { useLogto } from '@logto/vue';
- * import { useHandleSignInCallback } from '@logto/vue';
+ * import { useLogto } from '@slash-copilot/vue';
+ * import { useHandleSignInCallback } from '@slash-copilot/vue';
  *
  * export default {
  *   setup() {

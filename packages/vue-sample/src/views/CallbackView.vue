@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useHandleSignInCallback } from "@logto/vue";
+import { useHandleSignInCallback } from "@slash-copilot/vue";
 import router from "@/router";
 
 const { isLoading } = useHandleSignInCallback(() => {

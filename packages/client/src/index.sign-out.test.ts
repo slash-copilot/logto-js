@@ -14,8 +14,8 @@ import {
   createAdapters,
 } from './mock.js';
 
-jest.mock('@logto/js', () => ({
-  ...jest.requireActual('@logto/js'),
+jest.mock('@slash-copilot/js', () => ({
+  ...jest.requireActual('@slash-copilot/js'),
   fetchOidcConfig: async () => fetchOidcConfig(),
 }));
 

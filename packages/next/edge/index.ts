@@ -1,13 +1,13 @@
 import { RequestCookies, ResponseCookies } from '@edge-runtime/cookies';
-import { type GetContextParameters, type InteractionMode } from '@logto/node';
-import NodeClient from '@logto/node/edge';
+import { type GetContextParameters, type InteractionMode } from '@slash-copilot/node';
+import NodeClient from '@slash-copilot/node/edge';
 import { type NextRequest } from 'next/server';
 
 import BaseClient from '../src/client';
 import { createSession } from '../src/session';
 import type { LogtoNextConfig } from '../src/types.js';
 
-export type { LogtoContext, InteractionMode } from '@logto/node';
+export type { LogtoContext, InteractionMode } from '@slash-copilot/node';
 
 export default class LogtoClient extends BaseClient {
   constructor(config: LogtoNextConfig) {

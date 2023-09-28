@@ -1,12 +1,12 @@
-import type { LogtoConfig } from '@logto/client';
-import BaseClient, { createRequester } from '@logto/client';
 import { conditional } from '@silverhand/essentials';
+import type { LogtoConfig } from '@slash-copilot/client';
+import BaseClient, { createRequester } from '@slash-copilot/client';
 
 import { CacheStorage } from './cache.js';
 import { BrowserStorage } from './storage.js';
 import { generateCodeChallenge, generateCodeVerifier, generateState } from './utils/generators.js';
 
-export { createRequester, default as BaseClient } from '@logto/client';
+export { createRequester, default as BaseClient } from '@slash-copilot/client';
 export { generateCodeChallenge, generateCodeVerifier, generateState } from './utils/generators.js';
 
 export type {
@@ -17,7 +17,7 @@ export type {
   UserInfoResponse,
   InteractionMode,
   ClientAdapter,
-} from '@logto/client';
+} from '@slash-copilot/client';
 
 export {
   LogtoError,
@@ -32,7 +32,7 @@ export {
   buildOrganizationUrn,
   getOrganizationIdFromUrn,
   PersistKey,
-} from '@logto/client';
+} from '@slash-copilot/client';
 
 const navigate = (url: string) => {
   window.location.assign(url);

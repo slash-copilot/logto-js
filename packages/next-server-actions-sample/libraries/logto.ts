@@ -1,7 +1,7 @@
 'use server';
 
-import { UserScope } from '@logto/next';
-import LogtoClient from '@logto/next/server-actions';
+import { UserScope } from '@slash-copilot/next';
+import LogtoClient from '@slash-copilot/next/server-actions';
 import { cookies } from 'next/headers';
 
 const config = {

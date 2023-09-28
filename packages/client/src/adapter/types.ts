@@ -1,4 +1,4 @@
-import type { Requester } from '@logto/js';
+import type { Requester } from '@slash-copilot/js';
 import type { Nullable } from '@silverhand/essentials';
 
 /** @deprecated Use {@link PersistKey} instead. */

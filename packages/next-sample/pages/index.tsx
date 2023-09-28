@@ -1,4 +1,4 @@
-import { type LogtoContext } from '@logto/next';
+import { type LogtoContext } from '@slash-copilot/next';
 import Link from 'next/link';
 import { useMemo } from 'react';
 import useSWR from 'swr';

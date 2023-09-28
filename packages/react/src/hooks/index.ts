@@ -1,4 +1,4 @@
-import type LogtoClient from '@logto/browser';
+import type LogtoClient from '@slash-copilot/browser';
 import { trySafe, type Optional } from '@silverhand/essentials';
 import { useCallback, useContext, useEffect, useMemo, useRef } from 'react';
 
@@ -6,8 +6,8 @@ import { LogtoContext, throwContextError } from '../context.js';
 
 type OptionalPromiseReturn<T> = {
   [K in keyof T]: T[K] extends (...args: infer A) => Promise<infer R>
-    ? (...args: A) => Promise<Optional<R>>
-    : T[K];
+  ? (...args: A) => Promise<Optional<R>>
+  : T[K];
 };
 
 type Logto = {

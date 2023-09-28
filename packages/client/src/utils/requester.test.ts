@@ -1,4 +1,4 @@
-import { LogtoError, LogtoRequestError } from '@logto/js';
+import { LogtoError, LogtoRequestError } from '@slash-copilot/js';
 
 import { createRequester } from './requester.js';
 

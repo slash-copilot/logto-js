@@ -1,7 +1,7 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
-import { createLogto, UserScope } from "@logto/vue";
+import { createLogto, UserScope } from "@slash-copilot/vue";
 import { appId, endpoint, resource } from "./consts";
 
 const app = createApp(App);

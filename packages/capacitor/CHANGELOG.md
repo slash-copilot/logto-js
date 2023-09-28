@@ -1,4 +1,4 @@
-# @logto/capacitor
+# @slash-copilot/capacitor
 
 ## 1.1.1
 
@@ -26,4 +26,4 @@
 ### Patch Changes
 
 - Updated dependencies [eb94b36]
-  - @logto/browser@2.1.1
+  - @slash-copilot/browser@2.1.1

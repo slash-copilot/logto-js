@@ -1,4 +1,4 @@
-import LogtoClient from '@logto/next/edge';
+import LogtoClient from '@slash-copilot/next/edge';
 
 import { config } from './config';
 

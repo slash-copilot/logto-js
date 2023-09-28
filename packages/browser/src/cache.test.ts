@@ -1,4 +1,4 @@
-import { CacheKey } from '@logto/client';
+import { CacheKey } from '@slash-copilot/client';
 
 import { CacheStorage } from './cache.js';
 

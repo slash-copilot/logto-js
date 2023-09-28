@@ -1,5 +1,5 @@
 # Logto Next.js SDK
-[![Version](https://img.shields.io/npm/v/@logto/next)](https://www.npmjs.com/package/@logto/next)
+[![Version](https://img.shields.io/npm/v/@slash-copilot/next)](https://www.npmjs.com/package/@slash-copilot/next)
 [![Build Status](https://github.com/logto-io/js/actions/workflows/main.yml/badge.svg)](https://github.com/logto-io/js/actions/workflows/main.yml)
 [![Codecov](https://img.shields.io/codecov/c/github/logto-io/js)](https://app.codecov.io/gh/logto-io/js?branch=master)
 
@@ -10,19 +10,19 @@ The Logto Next.js SDK written in TypeScript. Check out our [integration guide](h
 ### Using npm
 
 ```bash
-npm install @logto/next
+npm install @slash-copilot/next
 ```
 
 ### Using yarn
 
 ```bash
-yarn add @logto/next
+yarn add @slash-copilot/next
 ```
 
 ### Using pnpm
 
 ```bash
-pnpm add @logto/next
+pnpm add @slash-copilot/next
 ```
 
 ## Get sample

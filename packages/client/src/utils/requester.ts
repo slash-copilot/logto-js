@@ -1,5 +1,6 @@
-import type { Requester } from '@logto/js';
-import { LogtoError, LogtoRequestError, isLogtoRequestError } from '@logto/js';
+/* eslint-disable @typescript-eslint/no-unnecessary-condition */
+import type { Requester } from '@slash-copilot/js';
+import { LogtoError, LogtoRequestError, isLogtoRequestError } from '@slash-copilot/js';
 
 /**
  * A factory function that creates a requester by accepting a `fetch`-like function.
@@ -22,6 +23,11 @@ export const createRequester = (fetchFunction: typeof fetch): Requester => {
       // Expected request error from server
       const { code, message } = responseJson;
       throw new LogtoRequestError(code, message);
+    }
+
+    if (response.headers?.get('content-type')?.includes('text/plain')) {
+      // eslint-disable-next-line no-restricted-syntax
+      return response.text() as unknown as T;
     }
 
     return response.json();

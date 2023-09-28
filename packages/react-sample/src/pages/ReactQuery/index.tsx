@@ -1,4 +1,4 @@
-import { useLogto } from '@logto/react';
+import { useLogto } from '@slash-copilot/react';
 import { useQuery, QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import { endpoint } from '../../consts';

@@ -1,5 +1,5 @@
 {
-  "name": "@logto/next-sample",
+  "name": "@slash-copilot/next-sample",
   "version": "2.1.1",
   "license": "MIT",
   "private": true,
@@ -9,7 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@logto/next": "workspace:^2.3.0",
+    "@slash-copilot/next": "workspace:^2.3.0",
     "next": "^13.5.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

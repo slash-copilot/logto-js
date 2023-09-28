@@ -1,5 +1,5 @@
 # Logto Vue SDK
-[![Version](https://img.shields.io/npm/v/@logto/vue)](https://www.npmjs.com/package/@logto/vue)
+[![Version](https://img.shields.io/npm/v/@slash-copilot/vue)](https://www.npmjs.com/package/@slash-copilot/vue)
 [![Build Status](https://github.com/logto-io/js/actions/workflows/main.yml/badge.svg)](https://github.com/logto-io/js/actions/workflows/main.yml)
 [![Codecov](https://img.shields.io/codecov/c/github/logto-io/js)](https://app.codecov.io/gh/logto-io/js?branch=master)
 
@@ -10,24 +10,24 @@ The Logto Vue SDK written in TypeScript. Check out our [integration guide](https
 ### Using npm
 
 ```bash
-npm install @logto/vue
+npm install @slash-copilot/vue
 ```
 
 ### Using yarn
 
 ```bash
-yarn add @logto/vue
+yarn add @slash-copilot/vue
 ```
 
 ### Using pnpm
 
 ```bash
-pnpm add @logto/vue
+pnpm add @slash-copilot/vue
 ```
 
 ## Get sample
 
-A sample Vue project with the integration of @logto/vue SDK can be found at [Vue Sample](https://github.com/logto-io/js/tree/master/packages/vue-sample). Check out the source code and try it with ease.
+A sample Vue project with the integration of @slash-copilot/vue SDK can be found at [Vue Sample](https://github.com/logto-io/js/tree/master/packages/vue-sample). Check out the source code and try it with ease.
 
 ```bash
 pnpm i && pnpm start

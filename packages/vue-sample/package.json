@@ -1,5 +1,5 @@
 {
-  "name": "@logto/vue-sample",
+  "name": "@slash-copilot/vue-sample",
   "version": "2.1.0",
   "license": "MIT",
   "private": true,
@@ -11,7 +11,7 @@
     "lint": "eslint --ext .vue,.ts src"
   },
   "dependencies": {
-    "@logto/vue": "workspace:^2.2.0",
+    "@slash-copilot/vue": "workspace:^2.2.0",
     "vue": "^3.3.13",
     "vue-router": "^4.0.14"
   },

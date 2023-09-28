@@ -1,4 +1,4 @@
-import type { GetContextParameters, LogtoContext } from '@logto/node';
+import type { GetContextParameters, LogtoContext } from '@slash-copilot/node';
 
 import type { CreateLogtoClient } from './create-client.js';
 import type { LogtoStorage } from './create-storage.js';

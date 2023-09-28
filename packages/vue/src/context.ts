@@ -1,4 +1,4 @@
-import type LogtoClient from '@logto/browser';
+import type LogtoClient from '@slash-copilot/browser';
 import type { ComputedRef, Ref, UnwrapRef } from 'vue';
 import { computed, reactive, toRefs } from 'vue';
 

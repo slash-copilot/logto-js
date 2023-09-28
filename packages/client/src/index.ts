@@ -17,7 +17,7 @@ import {
   verifyIdToken,
   type OidcConfigResponse,
   UserScope,
-} from '@logto/js';
+} from '@slash-copilot/js';
 import { type Optional, type Nullable } from '@silverhand/essentials';
 import { type JWTVerifyGetKey, createRemoteJWKSet } from 'jose';
 
@@ -39,7 +39,7 @@ import { buildAccessTokenKey, getDiscoveryEndpoint } from './utils/index.js';
 import { memoize } from './utils/memoize.js';
 import { once } from './utils/once.js';
 
-export type { IdTokenClaims, LogtoErrorCode, UserInfoResponse, InteractionMode } from '@logto/js';
+export type { IdTokenClaims, LogtoErrorCode, UserInfoResponse, InteractionMode } from '@slash-copilot/js';
 export {
   LogtoError,
   LogtoRequestError,
@@ -51,7 +51,7 @@ export {
   organizationUrnPrefix,
   buildOrganizationUrn,
   getOrganizationIdFromUrn,
-} from '@logto/js';
+} from '@slash-copilot/js';
 export * from './errors.js';
 export type { Storage, StorageKey, ClientAdapter } from './adapter/index.js';
 export { PersistKey, CacheKey } from './adapter/index.js';
@@ -71,7 +71,7 @@ export default class LogtoClient {
    * Get the OIDC configuration from the discovery endpoint. This method will
    * only fetch the configuration once and cache the result.
    */
-  readonly getOidcConfig: () => Promise<OidcConfigResponse> = once(this.#getOidcConfig);
+  readonly getOidcConfig: () => Promise<OidcConfigResponse> = once(this._getOidcConfig);
   /**
    * Get the access token from the storage with refresh strategy.
    *
@@ -86,7 +86,7 @@ export default class LogtoClient {
    * @returns The access token string.
    * @throws LogtoClientError if the user is not authenticated.
    */
-  readonly getAccessToken = memoize(this.#getAccessToken);
+  readonly getAccessToken = memoize(this._getAccessToken);
 
   /**
    * Get the access token for the specified organization from the storage with refresh strategy.
@@ -100,7 +100,7 @@ export default class LogtoClient {
    * @remarks
    * It uses the same refresh strategy as {@link getAccessToken}.
    */
-  readonly getOrganizationToken = memoize(this.#getOrganizationToken);
+  readonly getOrganizationToken = memoize(this._getOrganizationToken);
 
   /**
    * Handle the sign-in callback by parsing the authorization code from the
@@ -111,9 +111,9 @@ export default class LogtoClient {
    * In many cases you'll probably end up passing `window.location.href` as the argument to this function.
    * @throws LogtoClientError if the sign-in session is not found.
    */
-  readonly handleSignInCallback = memoize(this.#handleSignInCallback);
+  readonly handleSignInCallback = memoize(this._handleSignInCallback);
 
-  protected readonly getJwtVerifyGetKey = once(this.#getJwtVerifyGetKey);
+  protected readonly getJwtVerifyGetKey = once(this._getJwtVerifyGetKey);
   protected readonly adapter: ClientAdapterInstance;
   protected readonly accessTokenMap = new Map<string, AccessToken>();
 
@@ -220,7 +220,11 @@ export default class LogtoClient {
    * @see {@link https://docs.logto.io/docs/recipes/integrate-logto/vanilla-js/#sign-in | Sign in} for more information.
    * @see {@link InteractionMode}
    */
-  async signIn(redirectUri: string, interactionMode?: InteractionMode): Promise<void> {
+  async signIn(
+    redirectUri: string,
+    interactionMode?: InteractionMode,
+    inviteCode?: string
+  ): Promise<void> {
     const { appId: clientId, prompt, resources, scopes } = this.logtoConfig;
     const { authorizationEndpoint } = await this.getOidcConfig();
     const codeVerifier = this.adapter.generateCodeVerifier();
@@ -237,6 +241,7 @@ export default class LogtoClient {
       resources,
       prompt,
       interactionMode,
+      inviteCode,
     });
 
     await Promise.all([
@@ -425,7 +430,7 @@ export default class LogtoClient {
     }
   }
 
-  async #getOidcConfig(): Promise<OidcConfigResponse> {
+  async _getOidcConfig(): Promise<OidcConfigResponse> {
     return this.adapter.getWithCache(CacheKey.OpenidConfig, async () => {
       return fetchOidcConfig(
         getDiscoveryEndpoint(this.logtoConfig.endpoint),
@@ -434,7 +439,7 @@ export default class LogtoClient {
     });
   }
 
-  async #getJwtVerifyGetKey(): Promise<JWTVerifyGetKey> {
+  async _getJwtVerifyGetKey(): Promise<JWTVerifyGetKey> {
     const { jwksUri } = await this.getOidcConfig();
 
     if (!this.adapter.unstable_cache) {
@@ -445,7 +450,7 @@ export default class LogtoClient {
     return async (...args) => cachedJwkSet.getKey(...args);
   }
 
-  async #getAccessToken(resource?: string, organizationId?: string): Promise<string> {
+  async _getAccessToken(resource?: string, organizationId?: string): Promise<string> {
     if (!(await this.isAuthenticated())) {
       throw new LogtoClientError('not_authenticated');
     }
@@ -468,7 +473,7 @@ export default class LogtoClient {
     return this.getAccessTokenByRefreshToken(resource, organizationId);
   }
 
-  async #getOrganizationToken(organizationId: string): Promise<string> {
+  async _getOrganizationToken(organizationId: string): Promise<string> {
     if (!this.logtoConfig.scopes?.includes(UserScope.Organizations)) {
       throw new LogtoClientError('missing_scope_organizations');
     }
@@ -476,7 +481,7 @@ export default class LogtoClient {
     return this.getAccessToken(undefined, organizationId);
   }
 
-  async #handleSignInCallback(callbackUri: string) {
+  async _handleSignInCallback(callbackUri: string) {
     const { requester } = this.adapter;
     const signInSession = await this.getSignInSession();
 

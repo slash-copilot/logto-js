@@ -1,4 +1,4 @@
-import type { GetContextParameters, LogtoConfig } from '@logto/node';
+import type { GetContextParameters, LogtoConfig } from '@slash-copilot/node';
 import type { SessionStorage } from '@remix-run/node';
 
 import { makeLogtoAdapter } from './infrastructure/logto/index.js';
@@ -36,7 +36,7 @@ export const makeLogtoRemix = (
   });
 };
 
-export { type LogtoContext } from '@logto/node';
+export { type LogtoContext } from '@slash-copilot/node';
 export {
   LogtoError,
   LogtoRequestError,
@@ -49,4 +49,4 @@ export {
   buildOrganizationUrn,
   getOrganizationIdFromUrn,
   PersistKey,
-} from '@logto/node';
+} from '@slash-copilot/node';

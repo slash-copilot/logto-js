@@ -1,4 +1,4 @@
-import { useLogto, type UserInfoResponse } from '@logto/react';
+import { useLogto, type UserInfoResponse } from '@slash-copilot/react';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 

@@ -1,11 +1,11 @@
-import type { LogtoConfig, ClientAdapter } from '@logto/client';
-import { createRequester } from '@logto/client';
+import type { LogtoConfig, ClientAdapter } from '@slash-copilot/client';
+import { createRequester } from '@slash-copilot/client';
 
 import BaseClient from '../src/client.js';
 
 import { generateCodeChallenge, generateCodeVerifier, generateState } from './generators.js';
 
-export { PersistKey } from '@logto/client';
+export { PersistKey } from '@slash-copilot/client';
 
 // Used for edge runtime, currently only NextJS.
 export default class LogtoClient extends BaseClient {

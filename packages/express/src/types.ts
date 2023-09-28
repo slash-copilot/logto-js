@@ -1,4 +1,4 @@
-import type { GetContextParameters, LogtoConfig } from '@logto/node';
+import type { GetContextParameters, LogtoConfig } from '@slash-copilot/node';
 
 declare module 'http' {
   // Honor module definition

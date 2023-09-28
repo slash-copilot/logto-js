@@ -1,5 +1,5 @@
-import type { Storage, StorageKey } from '@logto/client';
 import type { Nullable } from '@silverhand/essentials';
+import type { Storage, StorageKey } from '@slash-copilot/client';
 
 const keyPrefix = `logto`;
 

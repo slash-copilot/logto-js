@@ -1,5 +1,5 @@
-import { type Storage } from '@logto/node';
-import { PersistKey } from '@logto/node/edge';
+import { type Storage } from '@slash-copilot/node';
+import { PersistKey } from '@slash-copilot/node/edge';
 
 import { type Session } from './types';
 

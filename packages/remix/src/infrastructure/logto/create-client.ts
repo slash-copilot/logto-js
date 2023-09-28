@@ -1,5 +1,5 @@
-import type { LogtoConfig } from '@logto/node';
-import LogtoClient from '@logto/node';
+import type { LogtoConfig } from '@slash-copilot/node';
+import LogtoClient from '@slash-copilot/node';
 
 import type { LogtoStorage } from './create-storage.js';
 
@@ -14,4 +14,4 @@ export const makeLogtoClient =
 
 export type CreateLogtoClient = ReturnType<typeof makeLogtoClient>;
 
-export { type LogtoConfig } from '@logto/node';
+export { type LogtoConfig } from '@slash-copilot/node';

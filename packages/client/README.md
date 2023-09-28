@@ -1,5 +1,5 @@
 # Logto Client SDK
-[![Version](https://img.shields.io/npm/v/@logto/client)](https://www.npmjs.com/package/@logto/client)
+[![Version](https://img.shields.io/npm/v/@slash-copilot/client)](https://www.npmjs.com/package/@slash-copilot/client)
 [![Build Status](https://github.com/logto-io/js/actions/workflows/main.yml/badge.svg)](https://github.com/logto-io/js/actions/workflows/main.yml)
 [![Codecov](https://img.shields.io/codecov/c/github/logto-io/js)](https://app.codecov.io/gh/logto-io/js?branch=master)
 
@@ -10,19 +10,19 @@ The Logto JavaScript Client SDK written in TypeScript. Check out our [docs](http
 ### Using npm
 
 ```bash
-npm install @logto/client
+npm install @slash-copilot/client
 ```
 
 ### Using yarn
 
 ```bash
-yarn add @logto/client
+yarn add @slash-copilot/client
 ```
 
 ### Using pnpm
 
 ```bash
-pnpm add @logto/client
+pnpm add @slash-copilot/client
 ```
 
 ## What is this and how does it work?

@@ -1,4 +1,4 @@
-# @logto/next-app-dir-sample
+# @slash-copilot/next-app-dir-sample
 
 ## 2.1.1
 
@@ -17,4 +17,4 @@
 ### Patch Changes
 
 - Updated dependencies [0a533f6]
-  - @logto/next@2.1.0
+  - @slash-copilot/next@2.1.0

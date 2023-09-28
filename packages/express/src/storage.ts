@@ -1,6 +1,6 @@
 import type { IncomingMessage } from 'node:http';
 
-import type { Storage, StorageKey } from '@logto/node';
+import type { Storage, StorageKey } from '@slash-copilot/node';
 
 export default class ExpressStorage implements Storage<StorageKey> {
   constructor(private readonly request: IncomingMessage) {}

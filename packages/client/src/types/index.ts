@@ -4,7 +4,7 @@ import {
   UserScope,
   isArbitraryObject,
   withDefaultScopes,
-} from '@logto/js';
+} from '@slash-copilot/js';
 import { deduplicate } from '@silverhand/essentials';
 
 /** The configuration object for the Logto client. */

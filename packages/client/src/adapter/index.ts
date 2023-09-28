@@ -1,4 +1,4 @@
-import { type Requester } from '@logto/js';
+import { type Requester } from '@slash-copilot/js';
 import { trySafe, type Nullable, conditional } from '@silverhand/essentials';
 
 import {

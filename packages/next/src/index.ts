@@ -1,7 +1,7 @@
 import * as crypto from 'crypto';
 import { type IncomingMessage, type ServerResponse } from 'http';
 
-import NodeClient, { type GetContextParameters, type InteractionMode } from '@logto/node';
+import NodeClient, { type GetContextParameters, type InteractionMode } from '@slash-copilot/node';
 import {
   type GetServerSidePropsResult,
   type GetServerSidePropsContext,
@@ -26,9 +26,14 @@ export {
   buildOrganizationUrn,
   getOrganizationIdFromUrn,
   PersistKey,
-} from '@logto/node';
+} from '@slash-copilot/node';
 
-export type { IdTokenClaims, LogtoContext, InteractionMode, LogtoErrorCode } from '@logto/node';
+export type {
+  IdTokenClaims,
+  LogtoContext,
+  InteractionMode,
+  LogtoErrorCode,
+} from '@slash-copilot/node';
 
 export default class LogtoClient extends LogtoNextBaseClient {
   constructor(config: LogtoNextConfig) {
@@ -42,41 +47,41 @@ export default class LogtoClient extends LogtoNextBaseClient {
       redirectUri = `${this.config.baseUrl}/api/logto/sign-in-callback`,
       interactionMode?: InteractionMode
     ): NextApiHandler =>
-    async (request, response) => {
-      const nodeClient = await this.createNodeClientFromNextApi(request, response);
-      await nodeClient.signIn(redirectUri, interactionMode);
-      await this.storage?.save();
+      async (request, response) => {
+        const nodeClient = await this.createNodeClientFromNextApi(request, response);
+        await nodeClient.signIn(redirectUri, interactionMode);
+        await this.storage?.save();
 
-      if (this.navigateUrl) {
-        response.redirect(this.navigateUrl);
-      }
-    };
+        if (this.navigateUrl) {
+          response.redirect(this.navigateUrl);
+        }
+      };
 
   handleSignInCallback =
     (redirectTo = this.config.baseUrl): NextApiHandler =>
-    async (request, response) => {
-      const nodeClient = await this.createNodeClientFromNextApi(request, response);
+      async (request, response) => {
+        const nodeClient = await this.createNodeClientFromNextApi(request, response);
 
-      if (request.url) {
-        await nodeClient.handleSignInCallback(`${this.config.baseUrl}${request.url}`);
-        await this.storage?.save();
-        response.redirect(redirectTo);
-      }
-    };
+        if (request.url) {
+          await nodeClient.handleSignInCallback(`${this.config.baseUrl}${request.url}`);
+          await this.storage?.save();
+          response.redirect(redirectTo);
+        }
+      };
 
   handleSignOut =
     (redirectUri = this.config.baseUrl): NextApiHandler =>
-    async (request, response) => {
-      const nodeClient = await this.createNodeClientFromNextApi(request, response);
-      await nodeClient.signOut(redirectUri);
+      async (request, response) => {
+        const nodeClient = await this.createNodeClientFromNextApi(request, response);
+        await nodeClient.signOut(redirectUri);
 
-      await this.storage?.destroy();
-      await this.storage?.save();
+        await this.storage?.destroy();
+        await this.storage?.save();
 
-      if (this.navigateUrl) {
-        response.redirect(this.navigateUrl);
-      }
-    };
+        if (this.navigateUrl) {
+          response.redirect(this.navigateUrl);
+        }
+      };
 
   handleUser = (configs?: GetContextParameters) =>
     this.withLogtoApiRoute((request, response) => {
@@ -85,43 +90,43 @@ export default class LogtoClient extends LogtoNextBaseClient {
 
   handleAuthRoutes =
     (configs?: GetContextParameters): NextApiHandler =>
-    (request, response) => {
-      const { action } = request.query;
+      (request, response) => {
+        const { action } = request.query;
 
-      if (action === 'sign-in') {
-        return this.handleSignIn()(request, response);
-      }
+        if (action === 'sign-in') {
+          return this.handleSignIn()(request, response);
+        }
 
-      if (action === 'sign-up') {
-        return this.handleSignIn(undefined, 'signUp')(request, response);
-      }
+        if (action === 'sign-up') {
+          return this.handleSignIn(undefined, 'signUp')(request, response);
+        }
 
-      if (action === 'sign-in-callback') {
-        return this.handleSignInCallback()(request, response);
-      }
+        if (action === 'sign-in-callback') {
+          return this.handleSignInCallback()(request, response);
+        }
 
-      if (action === 'sign-out') {
-        return this.handleSignOut()(request, response);
-      }
+        if (action === 'sign-out') {
+          return this.handleSignOut()(request, response);
+        }
 
-      if (action === 'user') {
-        return this.handleUser(configs)(request, response);
-      }
+        if (action === 'user') {
+          return this.handleUser(configs)(request, response);
+        }
 
-      response.status(404).end();
-    };
+        response.status(404).end();
+      };
 
   withLogtoApiRoute =
     (handler: NextApiHandler, config: GetContextParameters = {}): NextApiHandler =>
-    async (request, response) => {
-      const nodeClient = await this.createNodeClientFromNextApi(request, response);
-      const user = await nodeClient.getContext(config);
+      async (request, response) => {
+        const nodeClient = await this.createNodeClientFromNextApi(request, response);
+        const user = await nodeClient.getContext(config);
 
-      // eslint-disable-next-line @silverhand/fp/no-mutating-methods
-      Object.defineProperty(request, 'user', { enumerable: true, get: () => user });
+        // eslint-disable-next-line @silverhand/fp/no-mutating-methods
+        Object.defineProperty(request, 'user', { enumerable: true, get: () => user });
 
-      return handler(request, response);
-    };
+        return handler(request, response);
+      };
 
   withLogtoSsr =
     <P extends Record<string, unknown> = Record<string, unknown>>(
@@ -130,15 +135,15 @@ export default class LogtoClient extends LogtoNextBaseClient {
       ) => GetServerSidePropsResult<P> | Promise<GetServerSidePropsResult<P>>,
       configs: GetContextParameters = {}
     ) =>
-    async (context: GetServerSidePropsContext) => {
-      const nodeClient = await this.createNodeClientFromNextApi(context.req, context.res);
-      const user = await nodeClient.getContext(configs);
+      async (context: GetServerSidePropsContext) => {
+        const nodeClient = await this.createNodeClientFromNextApi(context.req, context.res);
+        const user = await nodeClient.getContext(configs);
 
-      // eslint-disable-next-line @silverhand/fp/no-mutating-methods
-      Object.defineProperty(context.req, 'user', { enumerable: true, get: () => user });
+        // eslint-disable-next-line @silverhand/fp/no-mutating-methods
+        Object.defineProperty(context.req, 'user', { enumerable: true, get: () => user });
 
-      return handler(context);
-    };
+        return handler(context);
+      };
 
   async createNodeClientFromNextApi(
     request: IncomingMessage & {
@@ -160,8 +165,7 @@ export default class LogtoClient extends LogtoNextBaseClient {
           const maxAge = 14 * 3600 * 24;
           response.setHeader(
             'Set-Cookie',
-            `${cookieName}=${value}; Path=/; Max-Age=${maxAge}; ${
-              secure ? 'Secure; SameSite=None' : ''
+            `${cookieName}=${value}; Path=/; Max-Age=${maxAge}; ${secure ? 'Secure; SameSite=None' : ''
             }`
           );
         }

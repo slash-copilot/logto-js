@@ -1,4 +1,4 @@
-import { ReservedResource, UserScope } from '@logto/js';
+import { ReservedResource, UserScope } from '@slash-copilot/js';
 
 import { normalizeLogtoConfig } from './index.js';
 
