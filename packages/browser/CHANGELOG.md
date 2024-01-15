@@ -1,5 +1,16 @@
 # Change Log
 
+## 2.3.0
+
+### Minor Changes
+
+- bump slash-copilot/js
+
+### Patch Changes
+
+- Updated dependencies
+  - @slash-copilot/client@2.3.0
+
 ## 2.2.1
 
 ### Patch Changes

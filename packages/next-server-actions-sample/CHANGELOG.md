@@ -1,5 +1,16 @@
 # next-server-actions-sample
 
+## 2.2.0
+
+### Minor Changes
+
+- bump slash-copilot/js
+
+### Patch Changes
+
+- Updated dependencies
+  - @slash-copilot/next@2.5.0
+
 ## 2.1.4
 
 ### Patch Changes

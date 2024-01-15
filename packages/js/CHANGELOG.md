@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.1.0
+
+### Minor Changes
+
+- bump slash-copilot/js
+
 ## 3.0.1
 
 ### Patch Changes

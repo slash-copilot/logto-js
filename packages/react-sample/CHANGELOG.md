@@ -1,5 +1,16 @@
 # Change Log
 
+## 2.2.0
+
+### Minor Changes
+
+- bump slash-copilot/js
+
+### Patch Changes
+
+- Updated dependencies
+  - @slash-copilot/react@2.3.0
+
 ## 2.1.0
 
 ### Minor Changes

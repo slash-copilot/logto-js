@@ -1,5 +1,16 @@
 # Change Log
 
+## 3.1.0
+
+### Minor Changes
+
+- bump slash-copilot/js
+
+### Patch Changes
+
+- Updated dependencies
+  - @slash-copilot/express@2.3.0
+
 ## 2.0.0
 
 ### Major Changes

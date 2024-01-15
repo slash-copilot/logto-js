@@ -1,5 +1,16 @@
 # @slash-copilot/capacitor
 
+## 1.2.0
+
+### Minor Changes
+
+- bump slash-copilot/js
+
+### Patch Changes
+
+- Updated dependencies
+  - @slash-copilot/browser@2.3.0
+
 ## 1.1.1
 
 ### Patch Changes

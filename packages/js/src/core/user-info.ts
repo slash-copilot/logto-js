@@ -15,7 +15,7 @@ export type UserInfoResponse = {
   email?: Nullable<string>;
   email_verified?: boolean;
   phone_number?: Nullable<string>;
-  phone_number_verified?: boolean;
+  phone_number_verified?: boolean; // Not null in DB.
   custom_data?: unknown; // Not null in DB.
   identities?: Record<string, Identity>; // Not null in DB.
 };
